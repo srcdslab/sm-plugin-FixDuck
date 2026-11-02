@@ -1,6 +1,9 @@
 #include <sourcemod>
 
-public Plugin:myinfo =
+#pragma semicolon 1
+#pragma newdecls required
+
+public Plugin myinfo =
 {
 	name = "Duck Fix.",
 	author = "Kamay",
@@ -9,14 +12,14 @@ public Plugin:myinfo =
 	url = "http://steamcommunity.com/id/nullednull/"
 };
 
-public Action:OnPlayerRunCmd(client, &buttons, &impulse, Float:vel[3], Float:angles[3], &weapon)
+public Action OnPlayerRunCmd(int client, int &buttons, int &impulse, float vel[3], float angles[3], int &weapon)
 {
 	if (!IsClientInGame(client)) 
 	{
 		return Plugin_Continue;
 	}
 
-	new Float:DuckSpeed = GetEntPropFloat(client, Prop_Data, "m_flDuckSpeed");
+	float DuckSpeed = GetEntPropFloat(client, Prop_Data, "m_flDuckSpeed");
 	
 	if (DuckSpeed < 7.0)
 	{
