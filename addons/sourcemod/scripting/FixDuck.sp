@@ -8,7 +8,7 @@ public Plugin myinfo =
 	name = "Duck Fix.",
 	author = "Kamay",
 	description = "Duck Spamming fix.",
-	version = "1.0.1",
+	version = "1.0.2",
 	url = "http://steamcommunity.com/id/nullednull/"
 };
 
